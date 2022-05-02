@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.main {
+  position: relative;
+}
+
 body {
   font-family: Gotham-Medium, sans-serif;
 }
@@ -48,7 +52,7 @@ body {
 .nav {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   background-color: #fff;
   display: flex;
   justify-content: space-around;
@@ -76,7 +80,7 @@ body {
 
 .carousel-item img {
   width: 100%;
-  height: 600px;
+  height: 635px;
   cursor: pointer;
 }
 
@@ -147,7 +151,7 @@ li a:hover {
 }
 
 .row-content img {
-  height: 100%;
+  height: 80%;
 }
 
 .withhtml {
@@ -168,7 +172,7 @@ li a:hover {
 
 .section-brands {
   border-top: 1px dotted #424242;
-  margin-top: 250px;
+  margin-top: 140px;
   padding-top: 32px;
   display: flex;
   cursor: pointer;
@@ -223,4 +227,101 @@ li a:hover {
   background-color: #fff;
   border-radius: 50%;
   padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* banner about page */
+.banner-about {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  background-image: url('../img/about_banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-about h2 {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.banner-about h2::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 200px;
+  border-top: 5px solid #fff;
+  top: 110%;
+}
+
+.banner-about div {
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  max-width: 30%;
+  font-style: italic;
+  color: #fff;
+}
+
+.introduce-box {
+  margin: 100px auto 50px;
+  width: 80%;
+}
+
+.introduce-box h2 {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-family: Gotham-Ultra;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.introduce-box h2::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 250px;
+  top: 100%;
+  border-top: 7px solid #355c7d;
+}
+
+.row-introduce-box {
+  display: flex;
+  gap: 40px;
+}
+
+.row-introduce-box > p {
+  max-width: 50%;
+}
+
+.duty {
+  width: 80%;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.duty-item {
+  padding: 0 10px;
+  display: flex;
+  border: 2.5px solid #355c7d;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 49%;
+}
+
+.duty-item img {
+  width: 3.5em;
+  padding-right: 10px;
+}
+
+.duty-item h4 {
+  color: #bd945f;
+  font-size: 1rem !important;
+  margin: 10px 0 0;
 }
