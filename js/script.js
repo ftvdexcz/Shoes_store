@@ -1,5 +1,6 @@
 const modal = document.querySelector('.my-modal');
 const modalContent = document.querySelector('.mymodal-content');
+// const productItem = document.querySelectorAll('.product-item');
 
 modal.addEventListener('click', function () {
   modal.classList.add('hidden');
