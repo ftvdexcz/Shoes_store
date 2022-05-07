@@ -10,6 +10,12 @@ modalContent.addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
-const modalFadeIn = setTimeout(function () {
-  modal.style.display = 'flex';
-}, 4000);
+// const modalFadeIn = setTimeout(function () {
+//   modal.style.display = 'flex';
+// }, 4000);
+
+(function () {
+  setTimeout(function () {
+    modal.style.display = 'flex';
+  }, 4000);
+})();
