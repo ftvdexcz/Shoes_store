@@ -98,7 +98,7 @@ INSERT INTO Products VALUES('CN7188','Aztrek',2340000,4,45,'reebok-aztrek-black-
 INSERT INTO Products VALUES('B41955','Sobakov',2350000,0,324,'sobakov-shoes-white-b41955-01-standard.jpg','1','ecf8f41ce00d418d9385a90b00fd07cb_9366.jpg',1)
 INSERT INTO Products VALUES('FX5092','Continental 80',2450000,9,213,'continental-80-shoes-white-fx5092-01-standard.jpg','1','0968757e54da459c9cd6ac3a011f48b3_9366.jpg',1)
 INSERT INTO Products VALUES('B37365','POD-S3.1',2450000,0,13,'pod-s3-1-shoes-grey-b37365-01-standard.jpg','1','4fc886d69fd2487c9729a91200fcfd8c_9366.jpg',1)
-INSERT INTO Products VALUES('AT7859','Air Force 1 Type',2950000,12,214,'percentage-e3-percentage-83-percentage-8a-percentage-e3-percentage-82-percentage-a4-percentage-e3-percentage-82-percentage-ad-percentage-e3-percentage-82-percentage-a8-percentage-e3-percentage-8.jpg','1','',2)
+INSERT INTO Products VALUES('AT7859','Air Force 1 Type',2950000,12,214,'percen3.jpg','1','',2)
 INSERT INTO Products VALUES('EE7009','OZWEEGO',2450000,0,90,'ozweego-shoes-white-ee7009-01-standard.jpg','1','9404122de6f243b58173aa2c012e8872_9366.jpg',1)
 INSERT INTO Products VALUES('EA7331','Nike Blazer Mid 77 Paint Splatter',2650000,24,324,'giay-nike-blazer-mid-77-paint-splatter-dc7331-100-2.jpg','1','',2)
 INSERT INTO Products VALUES('CQ3022','Prophere',2650000,5,12,'prophere-shoes-black-cq3022-01-standard.jpg','1','cc72123fd7c34111819ea82900cbdaaf_9366.jpg',1)
