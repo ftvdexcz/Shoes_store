@@ -1,4 +1,4 @@
-﻿create database shoesStore
+create database shoesStore
 
 use shoesStore;
 
@@ -10,7 +10,7 @@ create table Brands(
 create table Products(
 	id char(6) not null primary key,
 	name nvarchar(100) not null,
-	cost float not null,
+	cost int not null,
 	discount int,
 	quantity int not null, 
 	image varchar(255),
@@ -90,7 +90,7 @@ INSERT INTO Products VALUES('G28565','Alphaboost Parley',2350000,20,324,'alphabo
 INSERT INTO Products VALUES('371318','Puma Bari Mule',1850000,12,123,'2019566-l.jpg','1','',6)
 INSERT INTO Products VALUES('DA6364','Nike Blazer Low 77 Vintage',2990000,5,213,'blazer-low-77-vintage-mens-shoe-hsxxnh.jpg','1','590a0a051e361515bcc1c5ab7b341ca9.jpg',2)
 INSERT INTO Products VALUES('1JM007','FILA Interlation',2150000,0,321,'fila-interlation-off-white-1jm00790-920-2-jpg-v-1575865944813.jpg','1','fila-interlation-off-white-1jm00790-920-4.jpg',5)
-INSERT INTO Products VALUES('AF5141','Ultra Boost 2.0 Chính Hãng',390000,44,1312,'ultra-boost-shoes-black-af5141-01-standard.jpg','1','72ab4216f8ed4bd4ad58a96601057b95_9366.jpg',1)
+INSERT INTO Products VALUES('AF5141','Ultra Boost 2.0 Chính Hãng',3900000,44,1312,'ultra-boost-shoes-black-af5141-01-standard.jpg','1','72ab4216f8ed4bd4ad58a96601057b95_9366.jpg',1)
 INSERT INTO Products VALUES('DD3111','Nike Blazer Mid Jumbo University Blue',2990000,25,123,'47349a97458f9a8196a5af6cc7bbdf8a-9cd09db0-6989-43f9-a647-67f6467649d9.jpg','1','ナイキ-ブレーザー-mid-77-ジャンボ-メンズシューズ-2N3DN5.jpg',2)
 INSERT INTO Products VALUES('CT2816','Nike Air Force 1 Low 3D',2950000,24,123,'nike-air-force-1-07-ct2816-001.jpg','1','Nike-Air-Force-1-CT2816-001-Release-Date-1.jpg',2)
 INSERT INTO Products VALUES('DD3112','Nike Blazer Mid 77 Jumbo Dark Russet',3250000,30,603,'ec1bbb42e3499c66e925de49243cd878-0bd2d187-c35a-454b-ad22-70000e275369.jpg','1','427db0af48e38b354c8096942746bda226b0e029_DD3111_101_nike_blazer_mid_77_jumbo_white_dark_russet_white_sail_SM_1_1024x1024_crop_center.jpg',2)
