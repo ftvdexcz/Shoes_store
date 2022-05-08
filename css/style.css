@@ -536,6 +536,26 @@ li a:hover {
   padding: 8px 0 8px 8px;
 }
 
+.search-form {
+  margin-bottom: 20px;
+  /* border: 1px solid #ccc; */
+}
+
+.search-field {
+  border: 1px solid #355c7d;
+  border-radius: 4px;
+  padding: 10px;
+  width: 291px;
+}
+
+.search-field-submit {
+  padding: 10px 14px;
+  border: 1px solid #355c7d;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #355c7d;
+}
+
 .search-controll {
   border: 1px solid #ccc;
   margin-bottom: 24px;
