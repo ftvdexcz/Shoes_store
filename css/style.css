@@ -722,3 +722,23 @@ giảm giá render -> product-price */
 .banner-product-btn:hover {
   color: #ccc;
 }
+
+/* detail page */
+.subnav {
+  border-bottom: 1px solid #777;
+  margin-bottom: 30px;
+  padding: 16px 0;
+}
+
+.subnav p {
+  margin: 0 0 0 20px;
+}
+
+.subnav p a,
+.subnav p i {
+  color: #5b5b5b;
+}
+
+.subnav p i {
+  margin: 0 8px;
+}
