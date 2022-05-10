@@ -24,23 +24,26 @@ create table Products(
 create table Customers(
 	id int identity(1,1) primary key,
 	name nvarchar(100) not null,
-	phone char(10), 
-	email varchar(50), 
+	phone char(10),
 	city nvarchar(50),
-	username varchar(50),
-	password varchar(50),
+	username varchar(50) not null,
+	password varchar(50) not null,
 )
 
 create table Orders(
-	id int identity(1,1) primary key,
-	requiredDate date,
-	quantity int not null,
+	id int identity(1,1) primary key, 
 	customerId int not null,
 	productId char(6) not null,
-	CONSTRAINT FK_Customers FOREIGN KEY (customerId)
-    REFERENCES Customers(id),
-	CONSTRAINT FK_Products FOREIGN KEY (productId)
-    REFERENCES Products(id),
+	quantity int not null,
+	CONSTRAINT FK_Customer FOREIGN KEY (customerId) REFERENCES Customers(id),
+	CONSTRAINT FK_Product FOREIGN KEY (productId) REFERENCES Products(id)
+)
+
+create table Bills(
+	id int identity(1,1) primary key, 
+	customerId int not null,
+	totalCost int not null,
+	CONSTRAINT FK_CustomerBill FOREIGN KEY (customerId) REFERENCES Customers(id),
 )
 
 INSERT INTO Brands VALUES('Adidas')
@@ -124,5 +127,5 @@ INSERT INTO Products VALUES('G27893','Stan Smith',2350000,37,12,'stan-smith-shoe
                         
 
 						
-INSERT INTO Customers VALUES(N'Đặng Quốc Long', '0362957746', 'ftvdexc95@gmail.com', N'Hà Nội', 'admin', 'abc123')
+INSERT INTO Customers VALUES(N'Đặng Quốc Long', '0362957746', N'Hà Nội', 'admin', 'abc123')
 select * from Customers

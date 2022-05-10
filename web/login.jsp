@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 
 <head>
@@ -13,6 +14,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="img/icon_title.png" type="image/icon type">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -21,26 +23,30 @@
 <body>
     <section>
         <div class="img-bg">
-            <img src="img/login_img.jpg" alt="background">
+            <img src="img/44341436_537190910058947_6584369323668979301_n.jpg" alt="background">
         </div>
         <div class="noi-dung">
             <div class="form">
                 <h2>Trang Đăng Nhập</h2>
-                <form action="" method='post'>
+                <form action="login" method='post'>
                     <div class="input-form">
-                        <label for="usr">Tên Người Dùng</label>
-                        <input type="text" name="nm" placeholder='User Name' id='usr'>
+                        <label for="usr">Tài khoản</label>
+                        <input required type="text" name="nm" placeholder='Tài khoản' id='usr'>
                     </div>
                     <div class="input-form">
                         <label for="pwd">Mật Khẩu</label>
-                        <input type="password" name="pass" placeholder="Password" id='pwd'>
+                        <input required type="password" name="pwd" placeholder="Mật khẩu" id='pwd'>
                     </div>
-
+					
+					<p style="color: red;">
+							${requestScope.loginError}
+					</p>
+					
                     <div class="input-form">
                         <input type="submit" value="Đăng Nhập">
                     </div>
                     <div class="input-form">
-                        <p>Bạn Chưa Có Tài Khoản? <a href="#">Đăng Ký</a></p>
+                        <p>Bạn Chưa Có Tài Khoản? <a href="register.jsp">Đăng Ký</a></p>
                     </div>
                 </form>
             </div>

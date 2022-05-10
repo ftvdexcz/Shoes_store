@@ -33,8 +33,8 @@
 				SẢN PHẨM CHÍNH HÃNG 100% | Hotline: <span>0362957746</span>
 			</div>
 			<div class="login-register">
-				<i class="far fa-user"></i> <a href="">Đăng nhập</a> | <a href="">Đăng
-					kí</a> <a href="cart" style="margin-left: 20px;"><i
+				<i class="far fa-user"></i><a style="margin-left:10px" href="info.jsp">${sessionScope.user==null?"":sessionScope.user.name}</a>  <span style="display:${sessionScope.user==null?"":"none"}"><a href="login">Đăng nhập</a> | <a href="register.jsp">Đăng
+					ký</a> <a href="cart" style="margin-left: 20px;"></span><i
 					class="fas fa-shopping-cart"></i> <span class="cart-quantity">${sessionScope.list_orders.size()>0?sessionScope.list_orders.size():"0"}</span></a>
 			</div>
 		</div>
@@ -103,7 +103,7 @@
 			
 			<div class="cart-redirect-btn">
 				<button class="cart-redirect-product" onclick="window.location.href='product'">Tiếp tục mua hàng</button>
-				<button style="margin-left: 4px; background-color: #3dc8f6" onclick="window.location.href=''">Thanh toán</button>
+				<button style="margin-left: 4px; background-color: #3dc8f6" onclick="${sessionScope.total>0?"window.location.href='check_out.jsp'":"#"}">Thanh toán</button>
 			</div>
 		</div>
 		
