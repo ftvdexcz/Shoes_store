@@ -33,6 +33,16 @@
 
 	<div class="main">
 		<div class="header"></div>
+		<div class="header2">
+			<div class="header2-title">
+				SẢN PHẨM CHÍNH HÃNG 100% | Hotline: <span>0362957746</span>
+			</div>
+			<div class="login-register">
+				<i class="far fa-user"></i> <a href="">Đăng nhập</a> | <a href="">Đăng
+					kí</a> <a href="cart" style="margin-left: 20px;"><i
+					class="fas fa-shopping-cart"></i> <span class="cart-quantity">${sessionScope.list_orders.size()>0?sessionScope.list_orders.size():"0"}</span></a>
+			</div>
+		</div>
 		<div class="nav">
 			<div class="logo">
 				<a href="index.jsp"><img src="img/shop_logo.jpg" alt=""></a>
@@ -42,11 +52,11 @@
 				<li><a href="about.jsp">giới thiệu</a></li>
 				<li><a href="product">sản phẩm <i class="fa fa-angle-down"></i></a>
 					<ul class="product-menu">
-				
+
 						<c:forEach var="b" items="${sessionScope.list_brands}">
 							<li><a href="product?brand=${b.id}">${b.name}</a></li>
 						</c:forEach>
-						
+
 					</ul></li>
 				<li><a href="news.jsp">tin tức</a></li>
 				<li><a href="contact.jsp">liên hệ</a></li>
@@ -202,6 +212,28 @@
 		</div>
 
 	</div>
+
+	<script type="text/javascript">
+	console.log(${sessionScope.modalDisplay});
+	const modal = document.querySelector('.my-modal');
+	const modalContent = document.querySelector('.mymodal-content');
+
+	modal.addEventListener('click', function () {
+	  modal.classList.add('hidden');
+	});
+
+	modalContent.addEventListener('click', function (e) {
+	  e.stopPropagation();
+	});
+
+
+	if(${sessionScope.modalDisplay}==1){
+		setTimeout(function () {
+		    modal.style.display = 'flex';
+		  }, 4000);
+		<%session.setAttribute("modalDisplay", 0);%>
+	}
+	</script>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
 	<script

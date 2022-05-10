@@ -145,4 +145,44 @@ public class ProductDAO extends DBConnect {
 
 		return products;
 	}
+	
+	public Product getProductById(String id) {
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			String sql = "SELECT p.id, p.name, p.cost, p.discount, p.quantity, p.image, p.status, p.imageDetail,p.brandId,"
+					+ " b.name AS brand FROM Products p , Brands b WHERE p.brandId = b.id AND p.id=?";
+			stmt = connection.prepareStatement(sql);
+			stmt.setString(1, id);
+			
+			// execute query
+			rs = stmt.executeQuery();
+
+			// process result set
+			if (rs.next()) {
+				// retrieve data from result set row
+
+				String name = rs.getString("name");
+				int cost = rs.getInt("cost");
+				int discount = rs.getInt("discount");
+				int quantity = rs.getInt("quantity");
+				String image = rs.getString("image");
+				String status = rs.getString("status");
+				String imageDetail = rs.getString("imageDetail");
+				int brandId = rs.getInt("brandId");
+				String brand = rs.getString("brand");
+
+				// create new instance
+				Product p = new Product(id, name, cost, discount, quantity, image, status, imageDetail,
+						new Brand(brandId, brand));
+
+				return p;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
 }

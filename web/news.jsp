@@ -22,6 +22,16 @@
 <body>
     <div class="main">
         <div class="header"></div>
+        <div class="header2">
+			<div class="header2-title">
+				SẢN PHẨM CHÍNH HÃNG 100% | Hotline: <span>0362957746</span>
+			</div>
+			<div class="login-register">
+				<i class="far fa-user"></i> <a href="">Đăng nhập</a> | <a href="">Đăng
+					kí</a> <a href="cart" style="margin-left: 20px;"><i
+					class="fas fa-shopping-cart"></i> <span class="cart-quantity">${sessionScope.list_orders.size()>0?sessionScope.list_orders.size():"0"}</span></a>
+			</div>
+		</div>
         <div class="nav">
             <div class="logo"><a href="index.jsp"><img src="img/shop_logo.jpg" alt=""></a></div>
             <ul class="menu">
@@ -43,6 +53,7 @@
         <div class="news-container">
             <h2>Tin tức</h2>
             <div class="news-row">
+            	<a href="https://authentic-shoes.com/blogs/news/mua-he-di-gi-diem-mat-cac-phoi-mau-sieu-hot-cua-yeezy-slide">       
                 <div class="news-item">
                     <div class="img-news">
                         <img src="img/news1.jpg" alt="">
@@ -55,6 +66,8 @@
                             ràng hơn khi ngành du lịch được mở cửa trở lại...</p>
                     </div>
                 </div>
+                </a>
+                <a href="https://authentic-shoes.com/blogs/news/run-star-motion-lieu-co-la-dong-giay-lon-nhat-cua-converse">
                 <div class="news-item">
                     <div class="img-news">
                         <img src="img/new2.jpg" alt="">
@@ -68,6 +81,8 @@
                         </p>
                     </div>
                 </div>
+                </a>
+                <a href="https://authentic-shoes.com/blogs/news/legitcheck-cach-phan-biet-cactus-jack-dunk-real-va-fake">
                 <div class="news-item">
                     <div class="img-news">
                         <img src="img/news3.jpg" alt="">
@@ -81,8 +96,10 @@
                         </p>
                     </div>
                 </div>
+                </a>
             </div>
             <div class="news-row">
+            	<a href="https://authentic-shoes.com/blogs/news/fear-of-god-ong-hoang-cua-de-che-thoi-trang-duong-dai">
                 <div class="news-item">
                     <div class="img-news">
                         <img src="img/news4.jpg" alt="">
@@ -96,6 +113,8 @@
                         </p>
                     </div>
                 </div>
+                </a>
+                <a href="https://authentic-shoes.com/blogs/news/10-doi-yeezys-dep-nhat-co-the-di-vao-mua-he">
                 <div class="news-item">
                     <div class="img-news">
                         <img src="img/news5.jpg" alt="">
@@ -109,6 +128,8 @@
                         </p>
                     </div>
                 </div>
+                </a>
+                <a href="https://authentic-shoes.com/blogs/news/dj-khaled-gioi-thieu-bst-air-jordan-5-we-the-best-sap-ra-mat-cua-anh-ay">
                 <div class="news-item">
                     <div class="img-news">
                         <img src="img/news6.jpg" alt="">
@@ -122,6 +143,7 @@
                         </p>
                     </div>
                 </div>
+                </a>
             </div>
 
 

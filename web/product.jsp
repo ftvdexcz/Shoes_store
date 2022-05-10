@@ -31,6 +31,16 @@
 <body>
 	<div class="main">
 		<div class="header"></div>
+		<div class="header2">
+			<div class="header2-title">
+				SẢN PHẨM CHÍNH HÃNG 100% | Hotline: <span>0362957746</span>
+			</div>
+			<div class="login-register">
+				<i class="far fa-user"></i> <a href="">Đăng nhập</a> | <a href="">Đăng
+					kí</a> <a href="cart" style="margin-left: 20px;"><i
+					class="fas fa-shopping-cart"></i> <span class="cart-quantity">${sessionScope.list_orders.size()>0?sessionScope.list_orders.size():"0"}</span></a>
+			</div>
+		</div>
 		<div class="nav">
 			<div class="logo">
 				<a href="index.jsp"><img src="img/shop_logo.jpg" alt=""></a>
@@ -112,10 +122,10 @@
 					</div>
 					<div class="sort-menu">
 						<form action="product">
-							<input type="hidden" value="${key}" name="key">
-							<input type="hidden" value="${brand}" name="brand">
-							<input type="hidden" value="${costlv}" name="costlv">
-							<label for="sort">Sắp xếp</label> <select id="sort" name="sort"
+							<input type="hidden" value="${key}" name="key"> <input
+								type="hidden" value="${brand}" name="brand"> <input
+								type="hidden" value="${costlv}" name="costlv"> <label
+								for="sort">Sắp xếp</label> <select id="sort" name="sort"
 								onchange="this.form.submit()">
 								<option value="default" ${sort=='default'?"selected":""}>Mặc
 									định</option>
@@ -132,7 +142,8 @@
 				<div class="product-grid">
 
 					<c:forEach var="item" items="${products_list}">
-						<div class="product-item">
+						<div class="product-item"
+							onclick="window.location.href = 'detail?id=${item.id}'">
 							<div class="discount">-${item.discount}%</div>
 							<img class="product-img" src="img/products_img/${item.image}"
 								alt="product_image">

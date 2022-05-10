@@ -39,6 +39,13 @@ public class IndexController extends HttpServlet{
 		List<Brand> brands = brandDAO.list();
 		HttpSession session = request.getSession();
 		session.setAttribute("list_brands", brands);
+		
+		Integer modalDisplay = (Integer) session.getAttribute("modalDisplay");
+		if(modalDisplay == null) {
+			modalDisplay = 1;
+			session.setAttribute("modalDisplay", modalDisplay);
+		}
+		
 		response.sendRedirect("index.jsp");
 	}
 }

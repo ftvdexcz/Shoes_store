@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import dal.BrandDAO;
 import dal.ProductDAO;
 import model.Product;
+import model.Util;
 
 @WebServlet("/product")
 public class ProductController extends HttpServlet {
@@ -23,10 +24,11 @@ public class ProductController extends HttpServlet {
 	private ProductDAO productDAO;
 	private BrandDAO brandDAO;
 
+
 	public ProductController() {
 		super();
 		productDAO = new ProductDAO();
-
+		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -74,18 +76,18 @@ public class ProductController extends HttpServlet {
 		} else {
 			if (costlv.equals("1")) {
 				for (Product p : products) {
-					if (costAfterDiscount(p.getCost(), p.getDiscount()) < 1000000)
+					if (Util.costAfterDiscount(p.getCost(), p.getDiscount()) < 1000000)
 						temp.add(p);
 				}
 			} else if (costlv.equals("2")) {
 				for (Product p : products) {
-					if (costAfterDiscount(p.getCost(), p.getDiscount()) <= 2000000
-							&& costAfterDiscount(p.getCost(), p.getDiscount()) >= 1000000)
+					if (Util.costAfterDiscount(p.getCost(), p.getDiscount()) <= 2000000
+							&& Util.costAfterDiscount(p.getCost(), p.getDiscount()) >= 1000000)
 						temp.add(p);
 				}
 			} else {
 				for (Product p : products) {
-					if (costAfterDiscount(p.getCost(), p.getDiscount()) > 2000000)
+					if (Util.costAfterDiscount(p.getCost(), p.getDiscount()) > 2000000)
 						temp.add(p);
 				}
 			}
@@ -108,14 +110,14 @@ public class ProductController extends HttpServlet {
 				Collections.sort(new_list, new Comparator<Product>() {
 					@Override
 					public int compare(Product o1, Product o2) {
-						return Double.compare(costAfterDiscount(o1.getCost(), o1.getDiscount()), costAfterDiscount(o2.getCost(), o2.getDiscount()));
+						return Double.compare(Util.costAfterDiscount(o1.getCost(), o1.getDiscount()), Util.costAfterDiscount(o2.getCost(), o2.getDiscount()));
 					}
 				});
 			} else if (sortFilter.equals("price-desc")) {
 				Collections.sort(new_list, new Comparator<Product>() {
 					@Override
 					public int compare(Product o1, Product o2) {
-						return Double.compare(costAfterDiscount(o2.getCost(), o2.getDiscount()), costAfterDiscount(o1.getCost(), o1.getDiscount()));
+						return Double.compare(Util.costAfterDiscount(o2.getCost(), o2.getDiscount()), Util.costAfterDiscount(o1.getCost(), o1.getDiscount()));
 					}
 				});
 			} else {
@@ -142,7 +144,5 @@ public class ProductController extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 	
-	private double costAfterDiscount(int cost, int discount) {
-		return cost-cost*discount/100;
-	}
+
 }

@@ -32,12 +32,15 @@ create table Customers(
 )
 
 create table Orders(
-	id int not null identity(1,1) primary key,
+	id int identity(1,1) primary key,
 	requiredDate date,
-	totalCost float not null,
-	customerId int,
+	quantity int not null,
+	customerId int not null,
+	productId char(6) not null,
 	CONSTRAINT FK_Customers FOREIGN KEY (customerId)
-    REFERENCES Customers(id)
+    REFERENCES Customers(id),
+	CONSTRAINT FK_Products FOREIGN KEY (productId)
+    REFERENCES Products(id),
 )
 
 INSERT INTO Brands VALUES('Adidas')
