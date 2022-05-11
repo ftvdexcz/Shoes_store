@@ -2,11 +2,7 @@ create database  shoesStore
 
 use shoesStore
 
-create table Brands(
-	id int not null AUTO_INCREMENT,
-	name varchar(100) not null,
-    PRIMARY KEY(id)
-)
+create table Brands(id int not null AUTO_INCREMENT,name varchar(100) not null,PRIMARY KEY(id))
 
 create table Products(
 	id char(6) not null ,
