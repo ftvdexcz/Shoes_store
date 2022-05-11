@@ -119,7 +119,7 @@ INSERT INTO Products VALUES('A80848','Running Zoom Fly',3650000,4,8,'s-l1000-7a2
 INSERT INTO Products VALUES('555088','Air Jordan 1 Retro High OG',6500000,0,12,'jordan-1-retro-patina-555088-033.jpg','1','',2)
 INSERT INTO Products VALUES('CT8527','Jordan 4 Retro University Blue',7900000,12,3,'air-jordan-4-university-blue-ct8527-400-release-date-2-1.jpg','1','',2)
 INSERT INTO Products VALUES('159816','One Star Ox',1750000,12,12,'159816c-350-a-prem.jpg','1','',4)
-INSERT INTO Products VALUES('VN0A54','Vans Style 36',2490000,38,9,'s-l400.jpg','1','O1CN01t5K5JG1r7WLB8PUaf_!!3176125584.jpg',3)
+INSERT INTO Products VALUES('VN0A55','Vans Style 36',2490000,38,9,'s-l400.jpg','1','O1CN01t5K5JG1r7WLB8PUaf_!!3176125584.jpg',3)
 INSERT INTO Products VALUES('vn0a38','Era Big Daisies',1850000,10,21,'vn0a38frtoz1-vn0a38frtoz1-primary.jpg','1','VN0A38FRTOZ1_VN0A38FRTOZ1_3.jpg',3)
 INSERT INTO Products VALUES('4F6679','Vans Style 36 Lemon',1990000,10,12,'vn0a54f6679-1600x-jpg-v-1642696807.jpg','1','',3)
 INSERT INTO Products VALUES('VN0ALO','Era YOD',1950000,5,6,'57514000012.jpg','1','',3)
@@ -127,5 +127,5 @@ INSERT INTO Products VALUES('G27893','Stan Smith',2350000,37,12,'stan-smith-shoe
                         
 
 						
-INSERT INTO Customers VALUES(N'Đặng Quốc Long', '0362957746', N'Hà Nội', 'admin', 'abc123')
+INSERT INTO Customers VALUES('Đặng Quốc Long', '0362957746', 'Thành Phố Hà Nội', 'admin', 'abc123')
 select * from Customers
