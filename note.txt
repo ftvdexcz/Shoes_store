@@ -1,1 +1,5 @@
-line 89 in detail.jsp: viết tiếp cart.java
+1. error connect jdbc: https://stackoverflow.com/questions/32602992/why-i-am-getting-class-not-found-exception-for-class-fornamecom-mysql-jdbc-dri
+
+2. deploy to herouku: https://www.youtube.com/watch?v=l4cPWZt9Pus
+
+3. free mysql db: https://www.youtube.com/watch?v=-dBb75-pZpE&list=LL&index=1&t=624s
