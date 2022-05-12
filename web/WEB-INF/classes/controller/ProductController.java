@@ -93,13 +93,14 @@ public class ProductController extends HttpServlet {
 			}
 		}
 
-		int numperpage = 12; // number of items in a page
-		int size = temp.size();
-		int num = (size % numperpage == 0) ? (size / numperpage) : (size / numperpage + 1); // number of page
-		int start = (pageSelected - 1) * numperpage;
-		int end = Math.min(pageSelected * numperpage, size);
-
-		List<Product> new_list = productDAO.getListByPage(temp, start, end);
+		/*
+		 * int numperpage = 12; // number of items in a page int size = temp.size(); int
+		 * num = (size % numperpage == 0) ? (size / numperpage) : (size / numperpage +
+		 * 1); // number of page int start = (pageSelected - 1) * numperpage; int end =
+		 * Math.min(pageSelected * numperpage, size);
+		 * 
+		 * List<Product> new_list = productDAO.getListByPage(temp, start, end);
+		 */
 
 		// sort
 		String sortFilter = request.getParameter("sort");
@@ -107,21 +108,21 @@ public class ProductController extends HttpServlet {
 			sortFilter = "default";
 		} else {
 			if (sortFilter.equals("price-asc")) {
-				Collections.sort(new_list, new Comparator<Product>() {
+				Collections.sort(temp, new Comparator<Product>() {
 					@Override
 					public int compare(Product o1, Product o2) {
 						return Double.compare(Util.costAfterDiscount(o1.getCost(), o1.getDiscount()), Util.costAfterDiscount(o2.getCost(), o2.getDiscount()));
 					}
 				});
 			} else if (sortFilter.equals("price-desc")) {
-				Collections.sort(new_list, new Comparator<Product>() {
+				Collections.sort(temp, new Comparator<Product>() {
 					@Override
 					public int compare(Product o1, Product o2) {
 						return Double.compare(Util.costAfterDiscount(o2.getCost(), o2.getDiscount()), Util.costAfterDiscount(o1.getCost(), o1.getDiscount()));
 					}
 				});
 			} else {
-				Collections.sort(new_list, new Comparator<Product>() {
+				Collections.sort(temp, new Comparator<Product>() {
 					@Override
 					public int compare(Product o1, Product o2) {
 						return o1.getName().compareToIgnoreCase(o2.getName());
@@ -129,6 +130,14 @@ public class ProductController extends HttpServlet {
 				});
 			}
 		}
+		
+		int numperpage = 12; // number of items in a page
+		int size = temp.size();
+		int num = (size % numperpage == 0) ? (size / numperpage) : (size / numperpage + 1); // number of page
+		int start = (pageSelected - 1) * numperpage;
+		int end = Math.min(pageSelected * numperpage, size);
+
+		List<Product> new_list = productDAO.getListByPage(temp, start, end);
 
 		request.setAttribute("page", pageSelected); // handle active link
 		request.setAttribute("num", num); // send number of pages to display in view
