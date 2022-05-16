@@ -13,7 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="E:/Long/Learn/java_libs/sqljdbc_8.2.2.0_enu/sqljdbc_8.2/enu/mssql-jdbc-8.2.2.jre8.jar">
+	<classpathentry kind="lib" path="C:/Users/84362/Desktop/Workspace/Learn/Shoes_store/help/java_libs/sqljdbc_8.2.2.0_enu/sqljdbc_8.2/enu/mssql-jdbc-8.2.2.jre8.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
