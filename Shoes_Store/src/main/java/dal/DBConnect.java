@@ -1,5 +1,6 @@
 package dal;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -18,5 +19,16 @@ public class DBConnect {
 		} catch (ClassNotFoundException | SQLException ex) {
 			System.out.println(ex);
 		}
+	}
+	
+	
+	
+	public Connection getConnection() {
+		return connection;
+	}
+
+	public static void main(String[] args) {
+		DBConnect dbConnect = new DBConnect();
+		System.out.println(dbConnect.getConnection());
 	}
 }
