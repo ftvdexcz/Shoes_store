@@ -10,4 +10,7 @@
 <li>jdbc driver for SQL server: mssql-jdbc-8.2.2.jre8.jar</li>
 <li>jdbc driver for MySQL: mysql-connector-java-8.0.28.jar</li>
 <li>jstl jar: javax.servlet.jsp.jstl-1.2.1.jar & javax.servlet.jsp.jstl-api-1.2.1.jar</li>
+<li>gson-2.8.6.jar</li>
+<li>javax.mail.jar</li>  
+<li>javax.activation-1.2.0.jar</li>  
 </ul>
