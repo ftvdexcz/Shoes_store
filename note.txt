@@ -3,3 +3,5 @@
 2. deploy to herouku: https://www.youtube.com/watch?v=l4cPWZt9Pus
 
 3. free mysql db: https://www.youtube.com/watch?v=-dBb75-pZpE&list=LL&index=1&t=624s
+
+4. setup https tomcat: https://darrenoneill.eu/?p=772 + https://openplanning.net/11767/lam-sao-tu-dong-chuyen-huong-http-thanh-https-trong-ung-dung-java-web
