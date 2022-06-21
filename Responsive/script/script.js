@@ -145,3 +145,43 @@ document
     let inp = document.querySelector('input[name="recepient"]').value;
     window.location.href = `orders?recepient=${inp}`;
   });
+
+//const list=[];
+fetch("/shoes_store_dashboard/product")
+  .then((response) => {
+    console.log(response);
+    if (!response.ok) throw new Error(`Request failed`);
+    return response.json();
+  })
+  .then((data) => {
+    const keys = Object.keys(data);
+
+    keys.forEach((key) => {
+      list.push(data[key]);
+    });
+
+    for (p of list) {
+      let html =
+        "<tr><td>" +
+        p["id"] +
+        "</td><td>" +
+        p["name"] +
+        "</td><td>" +
+        p["cost"] +
+        "</td><td>" +
+        p["discount"] +
+        '</td><td><img src="data:image/jpg;base64,' +
+        p["image"] +
+        '" alt=""></td><td><img src="data:image/jpg;base64,' +
+        p["imageDetail"] +
+        '" alt=""></td><td>' +
+        p["brandId"] +
+        '</td><td><a href="productDAO?command=delete&id=' +
+        p["id"] +
+        '" onclick="if (!(confirm(\'Are you sure you want to delete this product?\'))) return false">XÓA</a><span>|</span> <a href="productDAO?command=load&id=' +
+        p["id"] +
+        '">SỬA</a></td></tr>';
+
+      document.querySelector(".products").insertAdjacentHTML("beforeend", html);
+    }
+  });
